@@ -1,15 +1,18 @@
-import type { Route } from "./+types/home";
-import { Info } from "../pages/info/info";
+import type { Route } from "./+types/home"
+import DefaultPage from '../components/DefaultPage/DefaultPage'
+import { AboutPage } from "../pages/about/about"
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "ABOUT" },
+    { title: "О банке" },
     { name: "description", content: "Welcome to React Router!" },
   ];
 }
 
-
-
-export default function About() {
-  return <Info />
+export default function AboutRoute() {
+  return <>
+    <DefaultPage>
+      <AboutPage />
+    </DefaultPage>
+  </>
 };

@@ -2,24 +2,25 @@ import React from "react";
 
 export default function Header() {
   return (
-      <div className="max-w-[1200px] w-full space-y-6 px-4">
-        <nav className="rounded-3xl border border-gray-200 p-6 dark:border-gray-700 space-y-4">
-          <ul className="flex flex-row">
-            {resources.map(({ href, text, icon }) => (
-              <li key={href}>
-                <a
-                  className="group flex items-center gap-2 self-stretch p-3 leading-normal text-blue-700 hover:underline dark:text-blue-500"
-                  href={href}
-                  rel="noreferrer"
-                >
-                  {icon}
-                  {text}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      </div>
+    <header>
+      лого
+      <nav>
+        <ul className="flex flex-row gap-4">
+          {resources.map(({ href, text, icon }) => (
+            <li key={href}>
+              <a
+                className="group flex items-center gap-1 self-stretch p-0 leading-normal text-blue-700 hover:underline dark:text-blue-500"
+                href={href}
+                rel="noreferrer"
+              >
+                {icon}
+                {text}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   )
 }
 
